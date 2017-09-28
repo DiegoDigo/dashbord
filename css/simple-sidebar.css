@@ -120,6 +120,7 @@ body {
 	border: 1px #00000 solid;
 	padding: 15px;	
 	border-radius: 5px;
+	box-shadow: 1px 4px 5px #888888;
 }
 .card-title h1{
 	text-align:center;
@@ -127,7 +128,7 @@ body {
 }
 
 .card_comanda_fechada{
-	background-color: red ;	
+	background-color: #F44336 ;	
 	border: 75px pink;
 	padding: 15px;
 	box-shadow: 85px black;
@@ -141,14 +142,23 @@ body {
 }
 
 .card_comanda_aberta {
-	background-color: blue ;	
+	background-color: #3F51B5 ;	
 	border: 75px pink;
 	padding: 15px;
 	box-shadow: 85px black;
-	border-radius:15px;
-	opacity: 0.5;	
+	border-radius:15px;		
+	opacity: 0.5;
+	box-shadow: 1px 3px 5px #888888;
 }
 
+div.card_comanda_aberta:hover {
+	opacity: 1;
+}
+
+.card_comanda_aberta h5{
+	color: white;
+	font-size:25px;	
+}
 
 @media(min-width:768px) {
     #wrapper {
