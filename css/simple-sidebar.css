@@ -1,6 +1,9 @@
 
+@import url('https://fonts.googleapis.com/css?family=Baloo');
+
 body {
     overflow-x: hidden;
+    background-color: #EEEEEE;
 }
 
 #wrapper {
@@ -104,62 +107,69 @@ body {
    margin-top: -20px;   
 }
 
-.btn-side-bar:hover{
-	border: none;
-}
-
 .chart-container {
-  position: relative;  
-
+  position: relative;
+  width: 50%;
+  height: 15%;  
 }
-
 .icon {
 	float: left;
 	padding-top: 7px ; 
 	padding-right: 10px ;
-}
-.card{
-	margin:15px;
-	border: 1px #00000 solid;
-	padding: 15px;	
-	border-radius: 5px;
-	box-shadow: 1px 4px 6px #888888;
-}
+}    
+
 .card-title h1{
 	text-align:center;
 	font-size:25px;
 }
 
-.card_comanda_fechada{
-	background-color: #F44336 ;	
-	border: 75px pink;
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+.wrimagecard{	
+	margin-top: 0;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    position: relative;
+    background: #fff;
+    box-shadow: 1px 4px 6px rgba(46,61,73,0.15);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.wrimagecard canvas, h1{	
 	padding: 15px;
-	box-shadow: 85px black;
-	border-radius:15px;	
 }
 
-.card_comanda_fechada h5{
-	color: white;
-	font-size:25px;	
+.wrimagecard .material-icons{
+	position: relative;
+    font-size: 70px;
+}
+.wrimagecard-topimage_header{
+padding: 20px;
 }
 
-.card_comanda_aberta {
-	background-color: #3F51B5 ;	
-	border: 75px pink;
-	padding: 15px;
-	box-shadow: 85px black;
-	border-radius:15px;		
-	
+.wrimagecard-topimage a {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.wrimagecard-topimage_title {
+    padding: 20px 24px;
+    height: 80px;
+    padding-bottom: 0.75rem;
+    position: relative;
+}
+.wrimagecard-topimage a {
+    border-bottom: none;
+    text-decoration: none;
+    color: #525c65;
+    transition: color 0.3s ease;
 }
 
-.card_comanda:hover {
-	box-shadow: 1px 3px 5px #888888;
-}
 
-.card_comanda_aberta h5{
-	color: white;
-	font-size:25px;	
-}
 
 @media(min-width:768px) {
     #wrapper {
