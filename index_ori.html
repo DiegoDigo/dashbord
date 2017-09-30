@@ -4,8 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Dashboard</title>
-        <!-- <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="css/simple-sidebar.css" rel="stylesheet">
     </head>
@@ -30,48 +29,48 @@
                                     <a href="#menu-toggle" class="btn btn-side-bar" id="menu-toggle"><i class="material-icons">close</i></a>
                                 </div> -->
                             </div>
-
                             <div class="row">
                                 <div class="col-sm-6 col-centered">
-                                      <div class="comanda_aberta">
-                                          <a>
-                                            <div class="comanda_aberta_title">
-                                                  <h4>Comandas abertas<span class="comanda_valor">95</span></h4>
+                                        <div class="wrimagecard wrimagecard-topimage">
+                                                <a href="#">
+                                                <div class="wrimagecard-topimage_header"  style="background-color: rgba(22, 160, 133, 0.1)">
+                                                  <center><i class="material-icons" style="color:#16A085">insert_drive_file</i></center>
+                                                </div>
+                                                <div class="wrimagecard-topimage_title">
+                                                  <h4>Comanda aberta<span class="comanda_valor">95</span></h4>
+                                                </div>
+                                              </a>
                                             </div>
-                                         </a>
-                                      </div>
+
                                 </div>
                                 <div class="col-sm-6 col-centered">
-                                      <div class="wrimagecard comanda_fechada">
-                                          <a>
-                                            <div class="comanda_aberta_title">
-                                                  <h4>Comandas Fechadas<span class="comanda_valor">95</span></h4>
+                                        <div class="wrimagecard wrimagecard-topimage">
+                                                <a href="#">
+                                                <div class="wrimagecard-topimage_header" style="background-color:rgba(187, 120, 36, 0.1)">
+                                                  <center><i class = "material-icons" style="color:#BB7824">insert_drive_file</i></center>
+                                                </div>
+                                                <div class="wrimagecard-topimage_title">
+                                                  <h4>Comanda fechadas<span class="comanda_valor">95</span></h4>
+                                                </div>
+                                              </a>
                                             </div>
-                                         </a>
-                                      </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class='wrimagecard'>
                                         <div class="card-title">
-                                            <h1>Mes Atual</h1>
+                                            <h1>Simple Sidebar</h1>
                                         </div>
-                                        <canvas id="bar" class="chart chart-line"
-                                        chart-data="data_mes_atual" chart-labels="labels_mes_atual"
-                                        chart-series="series_mes_atual" chart-colors="colors">
-                                      </canvas>
+                                        <canvas id="myChart2" class="chart-container"></canvas>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class='wrimagecard'>
                                         <div class="card-title">
-                                            <h1>Mes Anterior</h1>
+                                            <h1>Simple Sidebar</h1>
                                         </div>
-                                        <canvas id="bar" class="chart chart-line"
-                                          chart-data="data_mes_anterior" chart-labels="labels_mes_anterior"
-                                          chart-series="series_mes_anterior" chart-colors="colors">
-                                        </canvas>
+                                        <canvas id="myChart3" class="chart-container"></canvas>
                                     </div>
                                 </div>
                             </div>
@@ -79,7 +78,7 @@
                                 <div class="col-md-12">
                                     <div class='wrimagecard'>
                                         <div class="card-title">
-                                            <h1>Comparativo Anual</h1>
+                                            <h1>Mes Atual</h1>
                                         </div>
                                         <canvas id="bar" class="chart chart-bar"
                                           chart-data="data" chart-labels="labels"chart-series="series" chart-colors="colors"  >
@@ -92,12 +91,9 @@
                     </div>
 
         <!-- Bootstrap core JavaScript -->
-        <!-- <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/jquery/jquery.min.js"></script>
         <script src="vendor/popper/popper.min.js"></script>
-        <script src="vendor/bootstrap/js/bootstrap.min.js"></script> -->
-        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+        <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
         <script src="node_modules/chart.js/dist/Chart.min.js"></script>
         <script src="node_modules/angular/angular.min.js"></script>
         <script src="node_modules/angular-chart.js/dist/angular-chart.min.js"></script>
