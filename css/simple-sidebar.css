@@ -136,20 +136,11 @@ body {
     Border-radius: 5px;
 }
 
-.comanda_aberta:hover{
-
-    box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2);
-
-    transition: all 0.3s;
-}
-
-.comanda_aberta_title {
+.comanda_content {
     padding: 20px 24px;
-
     position: relative;
     text-align: center !important;
 }
-
 
 .comanda_aberta{
   margin-top: 0;
@@ -159,13 +150,25 @@ body {
   color:white;
 }
 
-.comanda_fechada{
-  margin-top: 0;
-  margin-bottom: 1.5rem;
-  position: relative;
-  background-color: rgba(187, 120, 36, 0.1);
-  color:white;
+.comanda_aberta:hover{
+    box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2);
+    transition: all 0.3s;
 }
+
+.comanda_fechada{
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    position: relative;
+    background-color: rgba(187, 120, 36, 0.1);
+    color:white;
+}
+
+.comanda_fechada:hover{
+    box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2);
+    opacity: 1;
+    transition: all 0.3s;
+}
+
 
 .btn-comanda {
     background-color: transparent !important;
