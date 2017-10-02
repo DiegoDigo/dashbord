@@ -8,10 +8,9 @@ function DashboardService() {
 
     var vim = this;
     
-    vim.testeMesAtual = {
-      'mes' : 'Fevereiro',
-      'dias' : ['1','2','3','4','5','6','7','8','9','10','11','12'],
-      'dados' : [11,65,23,45,33,4,23,45,67,34,55,99]
+    vim.testePrds = {
+      'prds' : ['Maquiagem','Escova','Progressiva', 'Corte', 'Manicure'],      
+      'dados' : [11,65,25,55,65]
     }
 
     vim.testeComandas = {
@@ -31,8 +30,8 @@ function DashboardService() {
         return vim.testeComandas;
     }
 
-    vim.getMesAnterior = function(){
-        return vim.testeMesAnterior;
+    vim.getPrds = function(){
+        return vim.testePrds;
     }
 
     vim.getGastos = function(){

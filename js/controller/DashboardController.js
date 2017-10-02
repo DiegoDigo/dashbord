@@ -10,6 +10,7 @@ function DashboardController(DashboardService,$scope) {
 
     vim.gastos = DashboardService.getGastos();
     vim.comandas = DashboardService.getComandas();
+    vim.prds = DashboardService.getPrds();
 
 
     $scope.colors = ['#45b7cd'];
@@ -21,5 +22,18 @@ function DashboardController(DashboardService,$scope) {
     $scope.colors_comanda = ['#45b7cd', '#A5D6A7', '#DCDCDC'];
     $scope.labels_comanda = vim.comandas.dias;    
     $scope.data_comanda = vim.comandas.dados;
+    $scope.options_comanda = {legend: {display:'true', position:'right'}};
 
+    
+    $scope.series_prd = vim.prds.prds;    
+    $scope.data_prd = vim.prds.dados;
+
+
+    $scope.labels_prd =  vim.prds.prds;    
+    $scope.data_prd = vim.prds.dados;
+    
  }
+
+
+
+ 
