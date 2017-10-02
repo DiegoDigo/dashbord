@@ -22,7 +22,7 @@ function DashboardController(DashboardService,$scope) {
     $scope.colors_comanda = ['#45b7cd', '#A5D6A7', '#DCDCDC'];
     $scope.labels_comanda = vim.comandas.dias;    
     $scope.data_comanda = vim.comandas.dados;
-    $scope.options_comanda = {legend: {display:'true', position:'right'}};
+    $scope.options_comanda = {legend: {display:'true', position:'bottom'}};
 
     
     $scope.series_prd = vim.prds.prds;    
@@ -30,8 +30,14 @@ function DashboardController(DashboardService,$scope) {
 
 
     $scope.labels_prd =  vim.prds.prds;    
-    $scope.data_prd = vim.prds.dados;
-    
+    $scope.data_prd = vim.prds.dados;    
+
+    vim.verComandas = function (points, evt) {
+        alert(points[0]._model.label);
+        
+    }
+
+
  }
 
 
