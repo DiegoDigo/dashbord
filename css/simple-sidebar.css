@@ -217,6 +217,17 @@ padding: 20px;
 
 
 
+@media(max-width:768px){
+    #sidebar-wrapper {              
+        display: none; 
+    }
+    #wrapper {
+        padding-left: 0;
+    }
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+}
 
 
 @media(min-width:768px) {
@@ -227,7 +238,7 @@ padding: 20px;
         padding-left: 250px;
     }
     #sidebar-wrapper {
-        width: 0;
+        width: 0;        
     }
     #wrapper.toggled #sidebar-wrapper {
         width: 250px;
