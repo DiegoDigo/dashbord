@@ -4,44 +4,45 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Dashboard</title>        
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">        
         <link href="css/simple-sidebar.css" rel="stylesheet">
     </head>
-    <body ng-controller="DashboardController as dash">
-            <div id="wrapper" class="toggled">
-                    <div id="sidebar-wrapper">
-                        <ul class="sidebar-nav">
-                            <li class="sidebar-brand">
-                                <a href="#">
-                                     Alliz Bootstrap
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">Dashboard<i class="material-icons icon">dashboard</i></a>
-                            </li>
-                        </ul>
-                    </div>
+    <body ng-controller="DashboardController as dash">            
                     <div id="page-content-wrapper">
                         <div class="container">
                             <div class="row">
                                 <div class="col-sm-12">
                                     <div class='wrimagecard'>
                                         <div class="card-title">
-                                            <h1>Comandas 2017</h1>
-                                        </div>
-                                        <canvas id="bar" chart-click="dash.verComandas" class="chart chart-bar"
-                                        chart-data="data" chart-labels="labels"chart-series="series" chart-colors="colors"  >
-                                      </canvas>
+                                            <h1>Faturamento 
+                                                <span>
+                                                        <select ng-model="dash.graf_anual_ano" ng-options="opt  for opt in dash.anos " ng-change="dash.validar()">
+                                                            </select>
+                                                </span>    
+                                            </h1>
+                                        </div>                                        
+                                            <canvas id="line" class="chart  chart-line" height="100px"
+                                            chart-data="data" chart-labels="labels"chart-series="series" chart-colors="colors"  >
+                                          </canvas>                                        
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-6">
                                        <div class="wrimagecard">
-                                           <div class="card-title">
-                                               <h1>Comandas</h1>
-                                           </div>
+                                           
+                                            <div class="card-title">
+                                                <h1>Camandas de <span>
+                                                 <select >
+                                                    <option>Janeiro</option>
+                                                    <option>Fevereiro</option>
+                                                    <option>Março</option>
+                                                    <option>Abril</option>
+                                                  </select>                                                   
+                                                </span>
+                                                </h1>
+                                            </div>             
+                                           
                                            <canvas id="pie" class="chart chart-pie"
                                             chart-data="data_comanda" chart-labels="labels_comanda"
                                             chart-options="options_comanda" chart-colors="colors_comanda" >
@@ -51,7 +52,13 @@
                                 <div class="col-sm-6">
                                         <div class="wrimagecard">
                                                 <div class="card-title">
-                                                    <h1>Serviços</h1>
+                                                    <h1>Serviços <span>
+                                                        <select >
+                                                           <option>Janeiro</option>
+                                                           <option>Fevereiro</option>
+                                                           <option>Março</option>
+                                                           <option>Abril</option>
+                                                         </select> </span></h1>
                                                 </div>
                                                 <canvas id="base" class="chart-horizontal-bar"
                                                 chart-data="data_prd" chart-labels="labels_prd" >
