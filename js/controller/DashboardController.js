@@ -18,6 +18,8 @@ function DashboardController(DashboardService,$scope) {
     $scope.series = vim.gastos.mes;
     $scope.data = vim.gastos.dados;
 
+    
+
     vim.ano_atual = new Date();
     vim.ano = vim.ano_atual.getFullYear();
 
@@ -29,7 +31,8 @@ function DashboardController(DashboardService,$scope) {
     
     $scope.series_prd = vim.prds.prds;    
     $scope.data_prd = vim.prds.dados;
-
+ 
+    vim.selected = vim.ano;
 
     $scope.labels_prd =  vim.prds.prds;    
     $scope.data_prd = vim.prds.dados;    
@@ -40,7 +43,8 @@ function DashboardController(DashboardService,$scope) {
     }
 
     vim.validar = function(){
-        alert(vim.graf_anual_ano, vim.ano);
+        console.log(vim.graf_anual_ano);
+        
         
     }
 
