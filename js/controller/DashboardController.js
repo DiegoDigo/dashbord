@@ -13,6 +13,9 @@ function DashboardController(DashboardService,$scope) {
     vim.prds = DashboardService.getPrds();
     vim.anos = [2017,2018,2019];
 
+
+    vim.teste = vim.anos[0];
+
     $scope.colors = ['#45b7cd'];
     $scope.labels = vim.gastos.dias;
     $scope.series = vim.gastos.mes;
@@ -44,6 +47,7 @@ function DashboardController(DashboardService,$scope) {
 
     vim.validar = function(){
         console.log(vim.graf_anual_ano);
+        
         
         
     }

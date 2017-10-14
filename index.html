@@ -16,8 +16,9 @@
                                         <div class="card-title">
                                             <h1>Faturamento 
                                                 <span>
-                                                        <select ng-model="dash.graf_anual_ano" ng-options="ano  for ano in dash.anos " ng-change="dash.validar()">
-                                                            </select>
+                                                        <select ng-model="dash.graf_anual_ano" ng-options="ano  for ano in dash.anos "
+                                                          ng-change="dash.validar()"  ng-init="dash.graf_anual_ano=dash.ano"></select>
+                                                        
                                                 </span>    
                                             </h1>
                                         </div>                                        
@@ -33,12 +34,8 @@
                                            
                                             <div class="card-title">
                                                 <h1>Camandas de <span>
-                                                 <select >
-                                                    <option>Janeiro</option>
-                                                    <option>Fevereiro</option>
-                                                    <option>Março</option>
-                                                    <option>Abril</option>
-                                                  </select>                                                   
+                                                        <select ng-model="dash.graf_anual_ano" ng-options="ano  for ano in dash.anos "
+                                                        ng-change="dash.validar()"  ng-init="dash.graf_anual_ano=dash.ano"></select>                                              
                                                 </span>
                                                 </h1>
                                             </div>             
@@ -53,12 +50,9 @@
                                         <div class="wrimagecard">
                                                 <div class="card-title">
                                                     <h1>Serviços <span>
-                                                        <select >
-                                                           <option>Janeiro</option>
-                                                           <option>Fevereiro</option>
-                                                           <option>Março</option>
-                                                           <option>Abril</option>
-                                                         </select> </span></h1>
+                                                            <select ng-model="dash.graf_anual_ano" ng-options="ano  for ano in dash.anos "
+                                                            ng-change="dash.validar()"  ng-init="dash.graf_anual_ano=dash.ano"></select>    
+                                                    </span></h1>
                                                 </div>
                                                 <canvas id="base" class="chart-horizontal-bar"
                                                 chart-data="data_prd" chart-labels="labels_prd" >
