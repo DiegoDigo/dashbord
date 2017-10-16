@@ -7,7 +7,8 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">        
         <link href="css/simple-sidebar.css" rel="stylesheet">
     </head>
-    <body ng-controller="DashboardController as dash">            
+    <body ng-controller="DashboardController as dash">   
+                
                     <div id="page-content-wrapper">
                         <div class="container">
                             <div class="row">
@@ -15,11 +16,9 @@
                                     <div class='wrimagecard'>
                                         <div class="card-title">
                                             <h1>Faturamento 
-                                                <span>
-                                                        <select ng-model="dash.graf_anual_ano" ng-options="ano  for ano in dash.anos "
-                                                          ng-change="dash.validar()"  ng-init="dash.graf_anual_ano=dash.ano"></select>
-                                                        
-                                                </span>    
+                                                               
+                                                    <span year-drop offset="0" range="20"  ></span>    
+                                                
                                             </h1>
                                         </div>                                        
                                             <canvas id="line" class="chart  chart-line" height="100px"
@@ -34,8 +33,7 @@
                                            
                                             <div class="card-title">
                                                 <h1>Camandas de <span>
-                                                        <select ng-model="dash.graf_anual_ano" ng-options="ano  for ano in dash.anos "
-                                                        ng-change="dash.validar()"  ng-init="dash.graf_anual_ano=dash.ano"></select>                                              
+                                                        <select ng-model="monthComandaSelected" ng-options="m for m in meses" ng-change="dash.validarMesComanda(monthComandaSelected)"></select>
                                                 </span>
                                                 </h1>
                                             </div>             
@@ -50,8 +48,7 @@
                                         <div class="wrimagecard">
                                                 <div class="card-title">
                                                     <h1>Serviços <span>
-                                                            <select ng-model="dash.graf_anual_ano" ng-options="ano  for ano in dash.anos "
-                                                            ng-change="dash.validar()"  ng-init="dash.graf_anual_ano=dash.ano"></select>    
+                                                            <select ng-model="monthServicoSelected" ng-options="m for m in meses" ng-change="dash.validarMesServico(monthServicoSelected)"></select>
                                                     </span></h1>
                                                 </div>
                                                 <canvas id="base" class="chart-horizontal-bar"
@@ -73,5 +70,6 @@
         <script src="js/app.js"></script>
         <script src="js/services/DashboardService.js"></script>
         <script src="js/controller/DashboardController.js"></script>
+        <script src="js/diretivas/selecteAnos.js"></script>        
       </body>
 </html>

@@ -7,24 +7,18 @@ DashboardController.$inject = ['DashboardService', '$scope'];
 function DashboardController(DashboardService,$scope) {
 
     var vim = this;
+    var months = [];     
+    var monthNames = [ "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+    "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro" ];
     vim.graf_anual_ano = undefined;
     vim.gastos = DashboardService.getGastos();
     vim.comandas = DashboardService.getComandas();
     vim.prds = DashboardService.getPrds();
-    vim.anos = [2017,2018,2019];
-
-
-    vim.teste = vim.anos[0];
-
+    
     $scope.colors = ['#45b7cd'];
     $scope.labels = vim.gastos.dias;
     $scope.series = vim.gastos.mes;
     $scope.data = vim.gastos.dados;
-
-    
-
-    vim.ano_atual = new Date();
-    vim.ano = vim.ano_atual.getFullYear();
 
     $scope.colors_comanda = ['#45b7cd', '#A5D6A7', '#DCDCDC'];
     $scope.labels_comanda = vim.comandas.dias;    
@@ -45,14 +39,32 @@ function DashboardController(DashboardService,$scope) {
         
     }
 
-    vim.validar = function(){
-        console.log(vim.graf_anual_ano);
-        
-        
-        
+    vim.validarMesComanda= function(teste) {
+        console.log(teste);
     }
 
+    vim.validarMesServico = function(teste){
+        console.log(months.indexOf(teste) + 1);
+    }
 
+    vim.validar = function(teste){        
+        console.log(teste);
+    }  
+    
+    var meses = function(){
+        for (var i = 0; i < 12; i++){
+            months.push(monthNames[i]);
+        }    
+        $scope.meses = months;
+        $scope.monthComandaSelected = months[new Date().getMonth()];
+        $scope.monthServicoSelected = months[new Date().getMonth()];
+    }        
+
+    var init = function(){
+        meses();
+    }
+
+    init();
  }
 
 
