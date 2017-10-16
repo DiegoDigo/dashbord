@@ -14,7 +14,7 @@
                             <div class="row">
                                 <div class="col-sm-12">
                                     <div class='wrimagecard'>
-                                        <div class="card-title">
+                                        <div class="card-ano-title">
                                             <h1>Faturamento 
                                                                
                                                     <span year-drop offset="0" range="20"  ></span>    
@@ -28,7 +28,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-sm-6">
+                                <div class="col-sm-4">
                                        <div class="wrimagecard">
                                            
                                             <div class="card-title">
@@ -38,13 +38,29 @@
                                                 </h1>
                                             </div>             
                                            
-                                           <canvas id="pie" class="chart chart-pie"
+                                           <canvas id="doughnut" class="chart chart-doughnut"
                                             chart-data="data_comanda" chart-labels="labels_comanda"
                                             chart-options="options_comanda" chart-colors="colors_comanda" >
                                            </canvas> 
                                        </div>
                                 </div>
-                                <div class="col-sm-6">
+                                <div class="col-sm-4">
+                                        <div class="wrimagecard">
+                                            
+                                             <div class="card-title">
+                                                 <h1>Produtos de <span>
+                                                         <select ng-model="monthComandaSelected" ng-options="m for m in meses" ng-change="dash.validarMesComanda(monthComandaSelected)"></select>
+                                                 </span>
+                                                 </h1>
+                                             </div>             
+                                            
+                                            <canvas id="pie" class="chart chart-pie"
+                                             chart-data="data_comanda" chart-labels="labels_comanda"
+                                             chart-options="options_comanda" chart-colors="colors_comanda" >
+                                            </canvas> 
+                                        </div>
+                                 </div>
+                                <div class="col-sm-4">
                                         <div class="wrimagecard">
                                                 <div class="card-title">
                                                     <h1>Serviços <span>
@@ -56,6 +72,7 @@
                                               </canvas> 
                                         </div>                                   
                                 </div>
+
                             </div>
                             </div>
                         </div>

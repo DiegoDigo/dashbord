@@ -1,42 +1,37 @@
 
-body {
-    overflow-x: hidden;
+body {    
     background-color: #EEEEEE;
 }
 
-.btn-side-bar {
-   padding:0;
-   margin-left: -20px;
-   margin-top: -20px;
+.card-ano-title h1{
+	text-align:left;
+    font-size:35px !important;
+    text-align: center;
+    font-weight: 300 !important;
 }
 
-
-.icon {
-	float: left;
-	padding-top: 7px ;
-	padding-right: 10px ;
-}
 
 .card-title h1{
 	text-align:left;
-    font-size:25px;
-    margin-left: 25px;
-}
-
-.col-centered{
-    float: none;
-    margin: 0 auto;
+    font-size:20px !important;           
+    font-style: italic;
+    font-weight: 500;     
 }
 
 .wrimagecard{
-	margin-top: 0;
+    padding: 15px;
+	margin-top: auto;
     margin-bottom: 1.5rem;    
     background: #fff;
     Border-radius: 5px;
 }
 
-.wrimagecard h1{
-	padding: 15px;
+.card-title h1 span select{
+    font-weight: 700;
+}
+
+.card-ano-title h1 span select{
+    font-weight: 700;
 }
 
 
@@ -46,37 +41,22 @@ select{
 
 
 @media(max-width:768px){
-    #line{
-        
+    .wrimagecard{
+        margin-top: 15px;                           
     }
+    
+    .wrimagecard h1{
+        padding: 5px;
+        font-size: 25px;
+    }
+	.chart-container {		
+		margin: 0 auto;
+		height: 50%;
+		width: 120%;
+	}
 }
 
 
 @media(min-width:768px) {
-    #wrapper {
-        padding-left: 0;
-    }
-    #wrapper.toggled {
-        padding-left: 250px;
-    }
-    #sidebar-wrapper {
-        width: 0;        
-    }
-    #wrapper.toggled #sidebar-wrapper {
-        width: 250px;
-    }
-    #page-content-wrapper {
-        padding: 20px;
-        position: relative;
-    }
-    #wrapper.toggled #page-content-wrapper {
-        position: relative;
-        margin-right: 0;
-    }
-	.chart-container {
-		position: relative;
-		margin: auto;
-		height: 50%;
-		width: 120%;
-	}
+    
 }
